@@ -16,4 +16,4 @@ app.listen(PORT, () => {
 // 定期処理（例えば1時間毎）
 setInterval(() => {
   runScraping();
-}, 1000 * 60);
+}, 1000 * 60*60*24);
