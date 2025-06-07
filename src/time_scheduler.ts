@@ -17,9 +17,9 @@ app.listen(PORT, () => {
 setInterval(() => {
  
   runScraping();
-}, 1000 * 60*60*1);
+}, 1000 * 60*60*12);
 
 setInterval(()=>{
   sendRequest();
-},1000*60*1
+},1000*60*12
 )
