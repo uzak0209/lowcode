@@ -1,4 +1,5 @@
 // src/index.ts
+
 import {
   typeText,
   clickButton,
@@ -11,13 +12,13 @@ import {
 } from "./base_function";
 import { deletePngFiles } from "./file_controller";
 
-(async () => {
+export async function runScraping() {
   interface LaunchBrowserResult {
     page: any;
     close: () => Promise<void>;
   }
   deletePngFiles();
-  // ここからプログラムを追加していく
+
   const { page, close }: LaunchBrowserResult = await launchBrowser(
     "https://books.toscrape.com/index.html"
   );
@@ -34,7 +35,12 @@ import { deletePngFiles } from "./file_controller";
     console.log(text);
     await clickButton(page, ".col-sm-8>a");
     i++;
-    console.log(i)
+    console.log(i);
   }
   await close();
-})();
+}
+
+// もしindex.ts単体で直接実行したいなら
+if (require.main === module) {
+  runScraping().catch(console.error);
+}

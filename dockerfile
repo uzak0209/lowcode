@@ -1,5 +1,5 @@
 # Node.js の公式イメージ（最新版 LTS）
-FROM node:20-slim
+FROM mcr.microsoft.com/playwright:v1.52.0-jammy
 
 # 作業ディレクトリ作成
 WORKDIR /app
@@ -15,4 +15,4 @@ RUN npx playwright install
 EXPOSE 3000
 
 # アプリの起動コマンド
-CMD ["npx", "tsx", "src/execute.ts"]
+CMD ["npx", "tsx", "src/time_scheduler.ts"]
