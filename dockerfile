@@ -10,7 +10,7 @@ RUN npm install
 
 # アプリのコードをコピー
 COPY . .
-
+RUN npx playwright install
 # サーバーがリッスンするポートを指定（必要に応じて）
 EXPOSE 3000
 
