@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 3000
 
 # アプリの起動コマンド
-CMD ["node", "src/execute.ts"]
+CMD ["npx", "tsx", "src/execute.ts"]
