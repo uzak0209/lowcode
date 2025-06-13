@@ -10,9 +10,9 @@ RUN npm install
 
 # アプリのコードをコピー
 COPY . .
-RUN npx playwright install
+RUN npm run start
 # サーバーがリッスンするポートを指定（必要に応じて）
 EXPOSE 3000
 
 # アプリの起動コマンド
-CMD ["npx", "tsx", "src/time_scheduler.ts"]
+CMD ["node", "dist/execute.js"]

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx playwright install && npx playwright install-deps",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +13,7 @@
   "description": "",
   "devDependencies": {
     "@types/express": "^5.0.3",
-    "@types/node": "^22.15.30",
+    "@types/node": "^22.15.31",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
@@ -20,4 +22,5 @@
     "glob": "^10.4.5",
     "playwright": "^1.52.0"
   }
+
 }

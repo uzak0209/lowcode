@@ -93,3 +93,4 @@ export async function splitscrapedText(text: string[],split:string) {
   console.log(parsed)
   return parsed;
 }
+// 
